@@ -1,0 +1,22 @@
+version: '3.3'
+
+services:
+  qws_docs:
+    container_name: "qws_docs_site"
+    build: .
+    volumes:
+      - ./linux_dist:/app_dist
+      - ./src:/mac_src
+    tty: true
+    command: bash -c "cp -r /mac_src/md /app/src/md &&
+      cp -r /mac_src/static /app/src/static &&
+      cp -r /mac_src/utils /app/src/utils &&
+      cp -r /mac_src/_page.html /app/src/_page.html &&
+      cp -r /mac_src/server.js /app/src/server.js &&
+      cd /app/src &&
+      make &&
+      cd /app_dist && rm -rf * &&
+      cp /app/src/server /app_dist/server &&
+      cp -r /app/src/md /app_dist/md &&
+      cp -r /app/src/static /app_dist/static &&
+      cp -r /app/src/_page.html /app_dist/_page.html"

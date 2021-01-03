@@ -2,3 +2,5 @@ node_modules
 package-lock.json
 .obj
 server
+linux_dist
+.idea

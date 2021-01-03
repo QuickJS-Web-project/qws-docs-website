@@ -5,7 +5,9 @@
   "main": "env.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "qjs server.js /Users/alexeysolovjov/CODE/Github/quickwebserver/qws-docs-website"
+    "dev": "qjs server.js /Users/alexeysolovjov/CODE/Github/quickwebserver/qws-docs-website",
+    "docker:cont:build": "docker build -t docker-qwsdocs-build:docker-qwsdocs-build .",
+    "docker:copy-server": "docker cp qws-docs-website:/app/src/server ./linux_dist/server_linux"
   },
   "keywords": [],
   "author": "",

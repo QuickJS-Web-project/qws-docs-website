@@ -1,0 +1,6 @@
+apps:
+  - script: "./server"
+    args: "/var/www/qws.lyoha.info"
+    name: 'qws-docs'
+    exec_interpreter: 'none'
+    cwd: ./

@@ -14,7 +14,7 @@ CC=clang
 else
 CC=gcc
 endif
-CFLAGS=-g -Wall -MMD -MF $(OBJDIR)/$(@F).d -Wno-array-bounds
+CFLAGS=-g -Wall -MMD -pthread -MF $(OBJDIR)/$(@F).d -Wno-array-bounds
 LDFLAGS=-flto
 CFLAGS_OPT=$(CFLAGS) -O2 -flto
 DEFINES:=-D_GNU_SOURCE
@@ -42,7 +42,7 @@ $(OBJDIR)/$(APPSHORT).o: $(APPPATH)/$(APPSHORT).c
 	$(CC) $(LDFLAGS) $(CFLAGS_OPT) -c $(INCLUDES) -o $@ $(APPSHORT).c
 
 $(APPPATH)/$(APPSHORT).c: $(APPSCRIPT)
-	qjsc -flto -D $(QWSINSTALLED)/src/worker/server_worker.js -e -M quickwebserver,quickwebserver -m -o $@ $(APPSCRIPT)
+	qjsc -flto -D $(QWSINSTALLED)/src/worker/server_worker.build.js -e -M quickwebserver,quickwebserver -m -o $@ $(APPSCRIPT)
 
 clean:
 	rm ./$(APPSHORT)
