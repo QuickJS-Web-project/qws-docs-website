@@ -4,7 +4,7 @@ Let's create an instance of the class imported in the
 previous step:
 
 ```javascript
-import QuickWebServer from "./node_modules/quick_web_server/src/QuickWebServer.js";
+import QuickWebServer from "./node_modules/quickwebserver/src/QuickWebServer.js";
 
 const server = new QuickWebServer();
 ```
