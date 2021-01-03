@@ -1,7 +1,7 @@
 # Fix for working in current dir
 APPSCRIPT=$(shell pwd)/server.js
 # Fix for working in current dir
-QWSINSTALLED=$(shell pwd)/node_modules/quickwebserver
+QWSINSTALLED=$(shell pwd)/node_modules/@lyohaplotinka/quickwebserver
 APPSHORT=$(shell basename "$(APPSCRIPT)" .js)
 APPPATH=$(shell dirname "$(APPSCRIPT)")
 

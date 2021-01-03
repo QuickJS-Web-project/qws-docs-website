@@ -9,6 +9,7 @@ services:
       - ./src:/mac_src
     tty: true
     command: bash -c "cp -r /mac_src/md/* /app/src/md &&
+      cp /mac_src/Makefile /app/src/Makefile &&
       cp -r /mac_src/static/* /app/src/static &&
       cp -r /mac_src/utils/* /app/src/utils &&
       cp -r /mac_src/_page.html /app/src/_page.html &&
