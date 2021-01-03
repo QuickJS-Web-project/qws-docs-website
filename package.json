@@ -1,0 +1,16 @@
+{
+  "name": "qws-docs-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "env.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "qjs server.js /Users/alexeysolovjov/CODE/Github/quickwebserver/qws-docs-website"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "quickwebserver": "git+https://github.com/QuickJS-Web-project/quickjs-web-server.git"
+  }
+}
