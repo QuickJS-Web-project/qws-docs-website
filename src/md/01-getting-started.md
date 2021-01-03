@@ -16,7 +16,7 @@ QuickJS doesn't support NPM, but you can still use it to download everything you
 do this, in the folder with your project, type:
 
 ```bash
-npm install --save quickwebserver
+npm install --save @lyohaplotinka/quickwebserver
 ```
 
 After downloading, a postinstall script will run that compiles 

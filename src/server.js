@@ -1,4 +1,4 @@
-import QuickWebServer from "./node_modules/quickwebserver/src/QuickWebServer.build.js";
+import QuickWebServer from "./node_modules/@lyohaplotinka/quickwebserver/src/QuickWebServer.build.js";
 import { SERVER_PATH } from './env.js'
 import {renderMdPage} from "./utils/renderPage.js";
 

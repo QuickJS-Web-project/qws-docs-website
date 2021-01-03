@@ -17,10 +17,10 @@ you need to change the import as follows:
 
 ```javascript
 // before: for working in runtime
-import QuickWebServer from './node_modules/quickwebserver/src/QuickWebServer.js'
+import QuickWebServer from './node_modules/@lyohaplotinka/quickwebserver/src/QuickWebServer.js'
 
 // after: for building an executable
-import QuickWebServer from './node_modules/quickwebserver/src/QuickWebServer.build.js'
+import QuickWebServer from './node_modules/@lyohaplotinka/quickwebserver/src/QuickWebServer.build.js'
 ```
 That's all, you can proceed to the next steps.
 
@@ -40,7 +40,7 @@ parameters are written for you.
 For example, consider the following working environment. 
 Your project is located in the`~/work/qws_server` folder.
 You installed QuickWebServer via NPM, so it is 
-located in `~/work/qws_server/node_modules/quickwebserver`.
+located in `~/work/qws_server/node_modules/@lyohaplotinka/quickwebserver`.
 
 This directory contains the `create-build-makefile.sh` 
 file, which is responsible for creating the Makefile. 
@@ -52,7 +52,7 @@ folder where you invoke the command. I recommend
 calling the command in the root directory of your project:
 
 ```bash
-~/work/qws_server $: ./node_modules/quickwebserver/create-build-makefile.sh ~/work/qws_server/index.js
+~/work/qws_server $: ./node_modules/@lyohaplotinka/quickwebserver/create-build-makefile.sh ~/work/qws_server/index.js
 ```
 
 When the command is done, you can call `make` and your 

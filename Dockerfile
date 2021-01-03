@@ -8,10 +8,10 @@ RUN echo "NPM Version:" && npm --version
 
 ADD ./src /app/src
 
-WORKDIR /app/src/node_modules/quickwebserver
+WORKDIR /app/src/node_modules/@lyohaplotinka/quickwebserver
 RUN ./build-shared.sh
 
-WORKDIR /app/src/node_modules/quickwebserver/c
+WORKDIR /app/src/node_modules/@lyohaplotinka/quickwebserver/c
 RUN make install
 
 WORKDIR /app/src
