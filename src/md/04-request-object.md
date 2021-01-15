@@ -3,11 +3,10 @@ Request object methods allow you to retrieve data sent
 by the client. List of methods and properties:
 
 * `request.body (getter)`  
-Returns a raw string from the request body. **Note**: in the current version, the data is not 
-parsed in any way. Regardless of the content type of 
-the request, a raw request body string is returned. If 
-JSON was passed in the request, you can process it 
-using `JSON.parse`.
+Returns a raw string from the request body. **Note**:
+  `multipart/form-data` body is not parsed for now. 
+  `application/json` and `application/x-www-form-urlencoded`
+  will be parsed as JavaScript objects.
 
 * `request.cookies (getter)`  
 Returns an object (key-value) with the cookies passed in the request.

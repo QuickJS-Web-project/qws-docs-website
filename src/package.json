@@ -13,6 +13,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@lyohaplotinka/quickwebserver": "0.0.1-1"
+    "@lyohaplotinka/quickwebserver": "0.0.2-2"
   }
 }
